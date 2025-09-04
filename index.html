@@ -1161,6 +1161,134 @@
             border-top: 2px solid #30363d;
         }
 
+        /* Card 15: User-Friendly Terminal Styles */
+        #card15 .card-front {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #card15 .terminal-header {
+            background: linear-gradient(to bottom, #3a3a3a, #2a2a2a);
+            padding: 12px 20px;
+            border-bottom: 2px solid #4a90e2;
+            display: flex;
+            align-items: center;
+        }
+
+        #card15 .terminal-title {
+            color: #4a90e2;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        #card15 .terminal-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #card15 .terminal-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        #card15 .prompt {
+            color: #4a90e2;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #card15 .command {
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        #card15 .output {
+            color: #9ca0a5;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+
+        #card15 .terminal-footer {
+            color: #4a90e2;
+            font-size: 14px;
+            margin-top: auto;
+            padding-top: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        #card15 .card-back {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        #card15 .back-terminal {
+            width: 100%;
+            text-align: center;
+        }
+
+        #card15 .back-header {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #card15 .status-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        #card15 .status-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        #card15 .status-ok {
+            color: #4ade80;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        #card15 .back-message {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 30px 0;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        #card15 .back-cta {
+            font-size: 14px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -1724,6 +1852,78 @@
                 </div>
                 
                 <div class="back-footer-acc"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 15: User-Friendly Terminal Style -->
+    <div class="card vertical" id="card15">
+        <div class="card-front">
+            <div class="terminal-header">
+                <span class="terminal-title">About Me</span>
+            </div>
+            <div class="terminal-content">
+                <div class="terminal-line">
+                    <span class="prompt">$</span> <span class="command">whoami</span>
+                </div>
+                <div class="output">Hyeman Lee</div>
+                
+                <div class="terminal-line">
+                    <span class="prompt">$</span> <span class="command">current_role</span>
+                </div>
+                <div class="output">Product Manager @ HASIA</div>
+                
+                <div class="terminal-line">
+                    <span class="prompt">$</span> <span class="command">show skills</span>
+                </div>
+                <div class="output">
+                    → Product Strategy<br/>
+                    → Team Leadership<br/>
+                    → Data Analysis<br/>
+                    → User Experience
+                </div>
+                
+                <div class="terminal-line">
+                    <span class="prompt">$</span> <span class="command">contact --list</span>
+                </div>
+                <div class="output">
+                    📧 hyeman.lee@hasia.org<br/>
+                    📱 010-8765-4321<br/>
+                    🏢 Seoul, Korea
+                </div>
+                
+                <div class="terminal-footer">
+                    Type "connect" to start conversation_
+                </div>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="back-terminal">
+                <div class="back-header">Connection Status</div>
+                
+                <div class="status-line">
+                    <span class="status-label">Network:</span>
+                    <span class="status-ok">● Connected</span>
+                </div>
+                
+                <div class="status-line">
+                    <span class="status-label">Available:</span>
+                    <span class="status-ok">● Mon-Fri 9AM-6PM</span>
+                </div>
+                
+                <div class="status-line">
+                    <span class="status-label">Response Time:</span>
+                    <span class="status-ok">< 24 hours</span>
+                </div>
+                
+                <div class="back-message">
+                    "Building bridges between<br/>
+                    technology and people"
+                </div>
+                
+                <div class="back-cta">
+                    Let's create something amazing together
+                </div>
             </div>
         </div>
     </div>
