@@ -1215,135 +1215,7 @@
             border-top: 2px solid #30363d;
         }
 
-        /* Card 15: User-Friendly Terminal Styles */
-        #card15 {
-            background: #1e1e1e;
-            color: #ffffff;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            width: 350px;
-            height: 600px;
-        }
-
-        #card15-back .terminal-header {
-            background: linear-gradient(to bottom, #3a3a3a, #2a2a2a);
-            padding: 12px 20px;
-            border-bottom: 2px solid #4a90e2;
-            display: flex;
-            align-items: center;
-        }
-
-        #card15-back .terminal-title {
-            color: #4a90e2;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        #card15-back .terminal-content {
-            padding: 25px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        #card15-back .terminal-line {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        #card15-back .prompt {
-            color: #4a90e2;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        #card15-back .command {
-            color: #ffffff;
-            font-size: 16px;
-        }
-
-        #card15-back .output {
-            color: #9ca0a5;
-            font-size: 15px;
-            line-height: 1.5;
-            margin-left: 25px;
-            margin-top: 5px;
-        }
-
-        #card15-back .terminal-footer {
-            color: #4a90e2;
-            font-size: 14px;
-            margin-top: auto;
-            padding-top: 20px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        #card15-back {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-        }
-
-        #card15-back .back-terminal {
-            width: 100%;
-            text-align: center;
-        }
-
-        #card15-back .back-header {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        #card15-back .status-line {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            margin-bottom: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-        }
-
-        #card15-back .status-label {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        #card15-back .status-ok {
-            color: #4ade80;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        #card15-back .back-message {
-            font-size: 18px;
-            line-height: 1.5;
-            margin: 30px 0;
-            font-style: italic;
-            opacity: 0.95;
-        }
-
-        #card15-back .back-cta {
-            font-size: 14px;
-            padding: 12px 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 25px;
-            display: inline-block;
-            margin-top: 20px;
-        }
+        /* Card 15 is now using inline styles for simplicity */
 
     </style>
 </head>
@@ -1911,77 +1783,46 @@
             </div>
         </div>
         
-        <!-- Card 15: User-Friendly Terminal Style -->
-        <h3 style="text-align: center; margin: 20px 0; font-family: 'Courier New', monospace;">15. User-Friendly Terminal Style (Vertical)</h3>
+        <!-- Card 15: Simple Business Terminal Style -->
+        <h3 style="text-align: center; margin: 20px 0; font-family: 'Courier New', monospace;">15. Simple Business Terminal (Vertical)</h3>
         <div class="cards-wrapper">
-            <div class="card vertical card-front" id="card15">
-            <div class="terminal-header">
-                <span class="terminal-title">About Me</span>
-            </div>
-            <div class="terminal-content">
-                <div class="terminal-line">
-                    <span class="prompt">$</span> <span class="command">whoami</span>
+            <div class="card vertical" id="card15-front" style="background: #1a1a1a; color: #ffffff; padding: 0;">
+                <div style="background: #333; padding: 15px; border-bottom: 2px solid #4CAF50;">
+                    <span style="color: #4CAF50; font-size: 14px; font-weight: bold;">HASIA Terminal v2.0</span>
                 </div>
-                <div class="output">Hyeman Lee</div>
-                
-                <div class="terminal-line">
-                    <span class="prompt">$</span> <span class="command">current_role</span>
+                <div style="padding: 30px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="margin-bottom: 25px;">
+                        <span style="color: #4CAF50;">></span> Name: <span style="color: #fff;">이혜만 (Hyeman Lee)</span>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <span style="color: #4CAF50;">></span> Role: <span style="color: #fff;">CEO @ HASIA</span>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <span style="color: #4CAF50;">></span> Email: <span style="color: #fff;">hyeman@hasia.ai</span>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <span style="color: #4CAF50;">></span> Phone: <span style="color: #fff;">+82-10-9120-7914</span>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <span style="color: #4CAF50;">></span> Location: <span style="color: #fff;">Seoul, Korea</span>
+                    </div>
+                    <div style="margin-top: 40px; color: #4CAF50; font-size: 12px; text-align: center;">
+                        Press [ENTER] to connect_
+                    </div>
                 </div>
-                <div class="output">Product Manager @ HASIA</div>
-                
-                <div class="terminal-line">
-                    <span class="prompt">$</span> <span class="command">show skills</span>
-                </div>
-                <div class="output">
-                    → Product Strategy<br/>
-                    → Team Leadership<br/>
-                    → Data Analysis<br/>
-                    → User Experience
-                </div>
-                
-                <div class="terminal-line">
-                    <span class="prompt">$</span> <span class="command">contact --list</span>
-                </div>
-                <div class="output">
-                    📧 hyeman.lee@hasia.org<br/>
-                    📱 010-8765-4321<br/>
-                    🏢 Seoul, Korea
-                </div>
-                
-                <div class="terminal-footer">
-                    Type "connect" to start conversation_
-                </div>
-            </div>
             </div>
             
-            <div class="card vertical card-back" id="card15-back">
-            <div class="back-terminal">
-                <div class="back-header">Connection Status</div>
-                
-                <div class="status-line">
-                    <span class="status-label">Network:</span>
-                    <span class="status-ok">● Connected</span>
+            <div class="card vertical" id="card15-back" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <div style="font-size: 24px; font-weight: bold; margin-bottom: 30px;">
+                    Let's Connect!
                 </div>
-                
-                <div class="status-line">
-                    <span class="status-label">Available:</span>
-                    <span class="status-ok">● Mon-Fri 9AM-6PM</span>
+                <div style="font-size: 16px; line-height: 1.8; margin-bottom: 30px;">
+                    "Innovation through<br/>
+                    collaboration"
                 </div>
-                
-                <div class="status-line">
-                    <span class="status-label">Response Time:</span>
-                    <span class="status-ok">< 24 hours</span>
+                <div style="padding: 15px 30px; background: rgba(255,255,255,0.2); border-radius: 25px; font-size: 14px;">
+                    Available for meetings
                 </div>
-                
-                <div class="back-message">
-                    "Building bridges between<br/>
-                    technology and people"
-                </div>
-                
-                <div class="back-cta">
-                    Let's create something amazing together
-                </div>
-            </div>
             </div>
         </div>
     </div>
