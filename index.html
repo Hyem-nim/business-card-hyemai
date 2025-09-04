@@ -512,6 +512,180 @@
                 font-size: 20px;
             }
         }
+        /* Card 11 - Terminal ASCII Style */
+        .card-front-ascii {
+            background: #2b2b2b;
+            color: #d4d4d4;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Courier New', 'Consolas', monospace;
+            padding: 0;
+        }
+
+        .card-back-ascii {
+            background: #2b2b2b;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Courier New', monospace;
+            padding: 0;
+        }
+
+        .card-front-ascii .terminal-header-ascii {
+            background: #2b2b2b;
+            border-bottom: 1px solid #3e3e42;
+            padding: 8px 15px;
+            color: #e88388;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-front-ascii .terminal-header-ascii::before {
+            content: '✱';
+            color: #e88388;
+            font-size: 12px;
+        }
+
+        .card-front-ascii .content-wrapper {
+            flex: 1;
+            display: flex;
+            padding: 15px 20px;
+            gap: 20px;
+        }
+
+        .card-front-ascii .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-front-ascii .ascii-logo-small {
+            color: #e88388;
+            font-size: 4px;
+            line-height: 1;
+            white-space: pre;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 0;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .card-front-ascii .cmd-section {
+            flex: 1;
+        }
+
+        .card-front-ascii .cmd-line {
+            margin-bottom: 6px;
+        }
+
+        .card-front-ascii .cmd-prompt {
+            color: #d4d4d4;
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+        .card-front-ascii .cmd-output {
+            color: #9ca3af;
+            font-size: 8px;
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+
+        .card-front-ascii .right-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 15px;
+            border-left: 1px solid #3e3e42;
+        }
+
+        .card-front-ascii .contact-title {
+            color: #e88388;
+            font-size: 9px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-front-ascii .contact-item {
+            margin-bottom: 6px;
+        }
+
+        .card-front-ascii .contact-label {
+            color: #e88388;
+            font-size: 8px;
+            display: block;
+            margin-bottom: 1px;
+        }
+
+        .card-front-ascii .contact-value {
+            color: #d4d4d4;
+            font-size: 9px;
+        }
+
+        .card-front-ascii .terminal-footer {
+            background: #2b2b2b;
+            border-top: 1px solid #3e3e42;
+            padding: 6px 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-front-ascii .tip-label {
+            color: #e88388;
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+        .card-front-ascii .tip-label::before {
+            content: '✱';
+            margin-right: 6px;
+        }
+
+        .card-front-ascii .tip-content {
+            color: #808080;
+            font-size: 9px;
+        }
+
+        .card-back-ascii .empty-header {
+            height: 31px;
+            background: #2b2b2b;
+            border-bottom: 1px solid #3e3e42;
+        }
+
+        .card-back-ascii .back-main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-back-ascii .slogan-command {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            line-height: 1.3;
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-back-ascii .slogan-comment {
+            color: #666666;
+            font-size: 11px;
+            font-style: italic;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-back-ascii .empty-footer {
+            height: 28px;
+            background: #2b2b2b;
+            border-top: 1px solid #3e3e42;
+        }
+
     </style>
 </head>
 <body>
@@ -825,6 +999,79 @@
                     --dangerously-skip<br>-permissions
                     <div class="comment">Trust me, I know what I'm doing</div>
                 </div>
+            </div>
+        </div>
+
+        <!-- 11. Terminal ASCII Style Horizontal Cards -->
+        <h3 style="text-align: center; margin: 20px 0; font-family: 'Courier New', monospace;">11. Terminal ASCII Style (Horizontal)</h3>
+        <div class="cards-wrapper">
+            <div class="card card-front-ascii">
+                <div class="terminal-header-ascii">~/Hasia/CEO/Hyeman_Lee</div>
+                
+                <div class="content-wrapper">
+                    <div class="left-content">
+                        <div class="ascii-logo-small">██╗  ██╗ █████╗ ███████╗██╗ █████╗ 
+██║  ██║██╔══██╗██╔════╝██║██╔══██╗
+███████║███████║███████╗██║███████║
+██╔══██║██╔══██║╚════██║██║██╔══██║
+██║  ██║██║  ██║███████║██║██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝</div>
+                        
+                        <div class="cmd-section">
+                            <div class="cmd-line">
+                                <div class="cmd-prompt">$ whoami</div>
+                                <div class="cmd-output">Hyeman Lee (이혜만)</div>
+                            </div>
+                            <div class="cmd-line">
+                                <div class="cmd-prompt">$ pwd</div>
+                                <div class="cmd-output">/Hasia/CEO</div>
+                            </div>
+                            <div class="cmd-line">
+                                <div class="cmd-prompt">$ find . -name "social_life"</div>
+                                <div class="cmd-output">// 404: Social life not found</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="right-content">
+                        <div class="contact-title">// Contact Info</div>
+                        <div class="contact-item">
+                            <span class="contact-label">email:</span>
+                            <span class="contact-value">hyeman@hasia.ai</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">phone:</span>
+                            <span class="contact-value">010-9120-7914</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">location:</span>
+                            <span class="contact-value">Bundang, Seongnam</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="terminal-footer">
+                    <span class="tip-label">Tip:</span>
+                    <span class="tip-content">Run "hasia --connect" for more info</span>
+                </div>
+            </div>
+            
+            <div class="card card-back-ascii">
+                <div class="empty-header"></div>
+                
+                <div class="back-main">
+                    <div>
+                        <div class="slogan-command">
+                            --dangerously-skip<br/>
+                            -permissions
+                        </div>
+                        <div class="slogan-comment">
+                            /* Trust me, I know what I'm doing */
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="empty-footer"></div>
             </div>
         </div>
     </div>
