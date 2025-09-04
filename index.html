@@ -14,51 +14,58 @@
         body {
             font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
             background: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 40px 20px;
             min-height: 100vh;
-            padding: 20px;
-            margin: 0;
-            overflow-x: auto;
         }
 
         .cards-container {
-            display: flex;
-            flex-direction: column;
-            gap: 60px;
-            width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            align-items: center;
         }
 
         .cards-wrapper {
             display: flex;
             gap: 40px;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            margin: 30px 0;
             flex-wrap: wrap;
         }
+        
+        h2, h3 {
+            text-align: center;
+            margin: 30px 0 20px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin: 50px 0 30px;
+            text-transform: uppercase;
+        }
 
-        /* Horizontal Card Styles */
+        /* Base Card Styles */
         .card {
+            border-radius: 12px;
+            border: 1px solid #333;
+            background: #ffffff;
+            display: inline-block;
+        }
+        
+        /* Horizontal Cards - Default */
+        .card:not(.vertical) {
             width: 600px;
             height: 350px;
-            border-radius: 12px;
             padding: 40px;
-            margin: 0 auto;
-            flex-shrink: 0;
         }
 
         /* Vertical Card Styles */
-        .card-vertical, .card.vertical {
+        .card.vertical {
             width: 350px;
             height: 600px;
-            border-radius: 12px;
             padding: 40px;
-            margin: 0 auto;
-            flex-shrink: 0;
         }
 
         /* Light Mode */
@@ -1494,7 +1501,7 @@
         <!-- 7. Monochrome Dark Vertical Cards -->
         <h3 style="text-align: center; margin: 20px 0; font-family: 'Courier New', monospace;">7. Monochrome Dark Mode (Vertical)</h3>
         <div class="cards-wrapper">
-            <div class="card-vertical card-front-mono">
+            <div class="card vertical card-front-mono">
                 <div class="top-section">
                     <div class="logo">HASIA</div>
                     <div class="name-section">
@@ -1513,7 +1520,7 @@
                 </div>
             </div>
             
-            <div class="card-vertical card-back-mono">
+            <div class="card vertical card-back-mono">
                 <div class="back-content">
                     --dangerously-skip<br>-permissions
                     <div class="comment">/* Trust me, I know what I'm doing */</div>
@@ -1524,7 +1531,7 @@
         <!-- 8. Cyberpunk Dark Vertical Cards -->
         <h3 style="text-align: center; margin: 20px 0; font-family: 'Courier New', monospace;">8. Cyberpunk Dark Mode (Vertical)</h3>
         <div class="cards-wrapper">
-            <div class="card-vertical card-front-dark">
+            <div class="card vertical card-front-dark">
                 <div class="top-section">
                     <div class="logo">HASIA</div>
                     <div class="name-section">
@@ -1543,7 +1550,7 @@
                 </div>
             </div>
             
-            <div class="card-vertical card-back-dark">
+            <div class="card vertical card-back-dark">
                 <div class="back-content">
                     --dangerously-skip<br>-permissions
                     <div class="comment">/* Trust me, I know what I'm doing */</div>
@@ -1848,7 +1855,7 @@
                 </div>
             </div>
             
-            <div class="card-vertical card-back-terminal-accurate">
+            <div class="card vertical card-back-terminal-accurate">
                 <div class="back-header-acc"></div>
                 
                 <div class="back-main-acc">
