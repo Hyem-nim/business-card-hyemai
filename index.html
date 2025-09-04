@@ -1181,7 +1181,7 @@
         }
 
         /* Card 15: User-Friendly Terminal Styles */
-        #card15 .card-front {
+        #card15 {
             background: #1e1e1e;
             color: #ffffff;
             padding: 0;
@@ -1189,7 +1189,7 @@
             flex-direction: column;
         }
 
-        #card15 .terminal-header {
+        #card15-back .terminal-header {
             background: linear-gradient(to bottom, #3a3a3a, #2a2a2a);
             padding: 12px 20px;
             border-bottom: 2px solid #4a90e2;
@@ -1197,13 +1197,13 @@
             align-items: center;
         }
 
-        #card15 .terminal-title {
+        #card15-back .terminal-title {
             color: #4a90e2;
             font-size: 16px;
             font-weight: 600;
         }
 
-        #card15 .terminal-content {
+        #card15-back .terminal-content {
             padding: 25px;
             flex: 1;
             display: flex;
@@ -1211,24 +1211,24 @@
             gap: 20px;
         }
 
-        #card15 .terminal-line {
+        #card15-back .terminal-line {
             display: flex;
             align-items: flex-start;
             gap: 10px;
         }
 
-        #card15 .prompt {
+        #card15-back .prompt {
             color: #4a90e2;
             font-weight: bold;
             font-size: 16px;
         }
 
-        #card15 .command {
+        #card15-back .command {
             color: #ffffff;
             font-size: 16px;
         }
 
-        #card15 .output {
+        #card15-back .output {
             color: #9ca0a5;
             font-size: 15px;
             line-height: 1.5;
@@ -1236,7 +1236,7 @@
             margin-top: 5px;
         }
 
-        #card15 .terminal-footer {
+        #card15-back .terminal-footer {
             color: #4a90e2;
             font-size: 14px;
             margin-top: auto;
@@ -1249,7 +1249,7 @@
             50% { opacity: 0.5; }
         }
 
-        #card15 .card-back {
+        #card15-back {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #ffffff;
             padding: 30px;
@@ -1257,12 +1257,12 @@
             align-items: center;
         }
 
-        #card15 .back-terminal {
+        #card15-back .back-terminal {
             width: 100%;
             text-align: center;
         }
 
-        #card15 .back-header {
+        #card15-back .back-header {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 30px;
@@ -1270,7 +1270,7 @@
             letter-spacing: 1px;
         }
 
-        #card15 .status-line {
+        #card15-back .status-line {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1280,18 +1280,18 @@
             border-radius: 5px;
         }
 
-        #card15 .status-label {
+        #card15-back .status-label {
             font-size: 14px;
             opacity: 0.9;
         }
 
-        #card15 .status-ok {
+        #card15-back .status-ok {
             color: #4ade80;
             font-size: 14px;
             font-weight: 500;
         }
 
-        #card15 .back-message {
+        #card15-back .back-message {
             font-size: 18px;
             line-height: 1.5;
             margin: 30px 0;
@@ -1299,7 +1299,7 @@
             opacity: 0.95;
         }
 
-        #card15 .back-cta {
+        #card15-back .back-cta {
             font-size: 14px;
             padding: 12px 20px;
             background: rgba(255, 255, 255, 0.2);
@@ -1877,8 +1877,7 @@
         <!-- Card 15: User-Friendly Terminal Style -->
         <h3 style="text-align: center; margin: 20px 0; font-family: 'Courier New', monospace;">15. User-Friendly Terminal Style (Vertical)</h3>
         <div class="cards-wrapper">
-            <div class="card vertical" id="card15">
-        <div class="card-front">
+            <div class="card vertical card-front" id="card15">
             <div class="terminal-header">
                 <span class="terminal-title">About Me</span>
             </div>
@@ -1916,8 +1915,9 @@
                     Type "connect" to start conversation_
                 </div>
             </div>
-        </div>
-        <div class="card-back">
+            </div>
+            
+            <div class="card vertical card-back" id="card15-back">
             <div class="back-terminal">
                 <div class="back-header">Connection Status</div>
                 
@@ -1945,8 +1945,7 @@
                     Let's create something amazing together
                 </div>
             </div>
-        </div>
-    </div>
+            </div>
         </div>
     </div>
 </body>
