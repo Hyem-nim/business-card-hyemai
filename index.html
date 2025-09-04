@@ -19,18 +19,26 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            margin: 0;
+            overflow-x: auto;
         }
 
         .cards-container {
             display: flex;
             flex-direction: column;
             gap: 60px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
         }
 
         .cards-wrapper {
             display: flex;
             gap: 40px;
             align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         /* Horizontal Card Styles */
@@ -39,14 +47,18 @@
             height: 350px;
             border-radius: 12px;
             padding: 40px;
+            margin: 0 auto;
+            flex-shrink: 0;
         }
 
         /* Vertical Card Styles */
-        .card-vertical {
+        .card-vertical, .card.vertical {
             width: 350px;
             height: 600px;
             border-radius: 12px;
             padding: 40px;
+            margin: 0 auto;
+            flex-shrink: 0;
         }
 
         /* Light Mode */
