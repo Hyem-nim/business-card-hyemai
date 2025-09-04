@@ -872,9 +872,9 @@
         .card-front-terminal-dir .terminal-header-dir {
             background: #161b22;
             border-bottom: 2px solid #30363d;
-            padding: 8px 15px;
+            padding: 10px 15px;
             color: #58a6ff;
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 600;
         }
 
@@ -886,7 +886,7 @@
 
         .card-front-terminal-dir .terminal-body {
             flex: 1;
-            padding: 20px;
+            padding: 15px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -895,23 +895,23 @@
 
         .card-front-terminal-dir .ascii-logo-vertical {
             color: #3fb950;
-            font-size: 4.5px;
+            font-size: 5.5px;
             line-height: 1;
             white-space: pre;
             font-family: 'Courier New', monospace;
             letter-spacing: 0;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             opacity: 0.9;
         }
 
         .card-front-terminal-dir .name-section-dir {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .card-front-terminal-dir .prompt-line {
             color: #8b949e;
-            font-size: 10px;
-            margin-bottom: 3px;
+            font-size: 11px;
+            margin-bottom: 4px;
         }
 
         .card-front-terminal-dir .prompt-line .prompt {
@@ -920,30 +920,30 @@
 
         .card-front-terminal-dir .output-line {
             color: #58a6ff;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 4px;
-            margin-left: 10px;
+            margin-bottom: 5px;
+            margin-left: 12px;
         }
 
         .card-front-terminal-dir .output-eng {
             color: #c9d1d9;
-            font-size: 12px;
-            margin-left: 10px;
-            margin-bottom: 4px;
+            font-size: 14px;
+            margin-left: 12px;
+            margin-bottom: 5px;
         }
 
         .card-front-terminal-dir .output-title {
             color: #3fb950;
-            font-size: 11px;
-            margin-left: 10px;
+            font-size: 12px;
+            margin-left: 12px;
             font-weight: 600;
         }
 
         .card-front-terminal-dir .tree-section {
-            margin-top: 20px;
-            font-size: 10px;
-            line-height: 1.6;
+            margin-top: 15px;
+            font-size: 11px;
+            line-height: 1.5;
         }
 
         .card-front-terminal-dir .tree-line {
@@ -966,9 +966,9 @@
         .card-front-terminal-dir .terminal-footer-dir {
             background: #161b22;
             border-top: 2px solid #30363d;
-            padding: 6px 15px;
+            padding: 8px 15px;
             color: #3fb950;
-            font-size: 9px;
+            font-size: 10px;
         }
 
         .card-front-terminal-dir .terminal-footer-dir::before {
@@ -1484,7 +1484,11 @@
                         <div class="tree-line"><span class="tree-branch">│   </span><span class="tree-file" style="margin-left: 4px;">+82-10-9120-7914</span></div>
                         <div class="tree-line"><span class="tree-branch">└──</span> <span class="tree-file">location.txt</span></div>
                         <div class="tree-line"><span class="tree-branch">    </span><span class="tree-file" style="margin-left: 4px;">Bundang, Seongnam</span></div>
-                        <div class="tree-line" style="margin-top: 12px; color: #6e7681; font-style: italic;">// 404: Social life not found</div>
+                    </div>
+                    
+                    <div style="margin-top: 15px;">
+                        <div class="prompt-line"><span class="prompt">$</span> find . -name "social_life"</div>
+                        <div class="tree-line" style="color: #f85149; margin-left: 12px;">Error: 404 - Social life not found</div>
                     </div>
                 </div>
                 
