@@ -68,10 +68,14 @@
         .card.vertical {
             width: 350px;
             height: 600px;
+            box-sizing: border-box;
         }
         
-        /* Default padding for vertical cards */
-        .card.vertical:not(#card9):not(#card10):not(#card11):not(#card12):not(#card13):not(#card14):not(#card15) {
+        /* Default padding for basic vertical cards (5-8) */
+        .card.vertical.card-front-mono,
+        .card.vertical.card-back-mono,
+        .card.vertical.card-front-dark,
+        .card.vertical.card-back-dark {
             padding: 40px;
         }
 
@@ -257,17 +261,17 @@
         }
 
         /* Vertical card adjustments */
-        .card-vertical .top-section {
+        .card.vertical .top-section {
             flex-direction: column;
             align-items: center;
             gap: 30px;
         }
 
-        .card-vertical .name-section {
+        .card.vertical .name-section {
             text-align: center;
         }
 
-        .card-vertical .contact-section {
+        .card.vertical .contact-section {
             text-align: center;
         }
 
@@ -326,7 +330,7 @@
             font-style: italic;
         }
 
-        /* Terminal Style - Card 9 */
+        /* Terminal Style - Card 9 & 10 */
         .card-front-terminal {
             background: #1e1e1e;
             color: #00ff00;
@@ -334,6 +338,9 @@
             flex-direction: column;
             justify-content: space-between;
             font-family: 'Courier New', 'Consolas', monospace;
+            padding: 40px;
+            width: 350px;
+            height: 600px;
         }
 
         .card-back-terminal {
@@ -344,6 +351,9 @@
             align-items: center;
             text-align: center;
             font-family: 'Courier New', 'Consolas', monospace;
+            padding: 40px;
+            width: 350px;
+            height: 600px;
         }
 
         .card-front-terminal .terminal-header {
@@ -545,7 +555,10 @@
             display: flex;
             flex-direction: column;
             font-family: 'Courier New', 'Consolas', monospace;
-            padding: 0;
+            padding: 0 !important;
+            width: 350px;
+            height: 600px;
+            box-sizing: border-box;
         }
 
         .card-back-ascii {
@@ -554,7 +567,10 @@
             display: flex;
             flex-direction: column;
             font-family: 'Courier New', monospace;
-            padding: 0;
+            padding: 0 !important;
+            width: 350px;
+            height: 600px;
+            box-sizing: border-box;
         }
 
         .card-front-ascii .terminal-header-ascii {
@@ -722,6 +738,7 @@
             padding: 0 !important;
             width: 350px;
             height: 600px;
+            box-sizing: border-box;
         }
 
         .card-back-focused {
@@ -733,6 +750,7 @@
             padding: 0 !important;
             width: 350px;
             height: 600px;
+            box-sizing: border-box;
         }
 
         .card-front-focused .terminal-header-focused {
@@ -890,6 +908,7 @@
             padding: 0 !important;
             width: 350px;
             height: 600px;
+            box-sizing: border-box;
         }
 
         .card-back-terminal-dir {
@@ -901,6 +920,7 @@
             padding: 0 !important;
             width: 350px;
             height: 600px;
+            box-sizing: border-box;
         }
 
         .card-front-terminal-dir .terminal-header-dir {
