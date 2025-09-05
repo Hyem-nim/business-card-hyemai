@@ -209,25 +209,25 @@
             }
         }
 
-        /* Card 16 - Minimal Light Terminal */
+        /* Card 16 - Minimal Light Terminal (Print-friendly) */
         .card-front-terminal-light {
             background: #ffffff;
-            color: #1a1a1a;
+            color: #000000;
             display: flex;
             flex-direction: column;
             font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
             padding: 0;
-            box-shadow: inset 0 0 0 1px #e0e0e0;
+            border: 1px solid #000000;
         }
 
         .card-back-terminal-light {
-            background: #fafafa;
-            color: #1a1a1a;
+            background: #ffffff;
+            color: #000000;
             display: flex;
             flex-direction: column;
             font-family: 'SF Mono', monospace;
             padding: 0;
-            box-shadow: inset 0 0 0 1px #e0e0e0;
+            border: 1px solid #000000;
         }
 
         .card-front-terminal-light .term-header-light {
@@ -313,77 +313,77 @@
             border-top: 1px solid #e0e0e0;
         }
 
-        /* Card 17 - Classic Green Terminal */
+        /* Card 17 - Classic Green Terminal (Print-friendly) */
         .card-front-terminal-classic {
             background: #000000;
-            color: #33ff00;
+            color: #00aa00;
             display: flex;
             flex-direction: column;
-            font-family: 'VT323', 'Courier New', monospace;
+            font-family: 'Courier New', monospace;
             padding: 0;
-            text-shadow: 0 0 3px #33ff00;
+            border: 1px solid #00aa00;
         }
 
         .card-back-terminal-classic {
             background: #000000;
-            color: #33ff00;
+            color: #00aa00;
             display: flex;
             flex-direction: column;
-            font-family: 'VT323', 'Courier New', monospace;
+            font-family: 'Courier New', monospace;
             padding: 0;
-            text-shadow: 0 0 3px #33ff00;
+            border: 1px solid #00aa00;
         }
 
         .card-front-terminal-classic .term-header-classic {
-            background: #0a0a0a;
-            border-bottom: 1px solid #33ff00;
+            background: #000000;
+            border-bottom: 1px solid #00aa00;
             padding: 10px 15px;
-            color: #33ff00;
+            color: #00aa00;
             font-size: 12px;
             font-weight: normal;
-            font-family: 'VT323', 'Courier New', monospace;
+            font-family: 'Courier New', monospace;
         }
 
         .card-front-terminal-classic .term-body {
-            font-family: 'VT323', 'Courier New', monospace;
-            font-size: 13px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
         }
 
         .card-front-terminal-classic .cmd {
-            color: #33ff00;
+            color: #00aa00;
         }
 
         .card-front-terminal-classic .cmd .prompt,
         .card-front-terminal-classic .cmd .user,
         .card-front-terminal-classic .cmd .path {
-            color: #33ff00;
+            color: #00aa00;
         }
 
         .card-front-terminal-classic .output {
-            color: #33ff00;
+            color: #00aa00;
         }
 
         .card-front-terminal-classic .ascii-accurate {
-            color: #33ff00;
-            text-shadow: 0 0 5px #33ff00;
+            color: #00aa00;
+            font-weight: bold;
         }
 
         .card-front-terminal-classic .highlight {
-            color: #ffff00;
-            text-shadow: 0 0 5px #ffff00;
+            color: #00ff00;
+            font-weight: bold;
         }
 
         .card-front-terminal-classic .success {
-            color: #00ffaa;
-            text-shadow: 0 0 3px #00ffaa;
+            color: #00dd00;
+            font-weight: bold;
         }
 
         .card-front-terminal-classic .term-footer-classic {
-            background: #0a0a0a;
-            border-top: 1px solid #33ff00;
+            background: #000000;
+            border-top: 1px solid #00aa00;
             padding: 8px 15px;
             font-size: 11px;
-            color: #33ff00;
+            color: #00aa00;
         }
 
         .card-back-terminal-classic .back-main-classic {
@@ -395,49 +395,32 @@
             padding: 20px;
         }
 
-        /* Card 18 - Modern Gradient Terminal */
+        /* Card 18 - Print-friendly Dark Terminal */
         .card-front-terminal-modern {
-            background: linear-gradient(135deg, #0d1117 0%, #1a202c 100%);
-            color: #e2e8f0;
+            background: #1a1a1a;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
             padding: 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-front-terminal-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6, #3b82f6);
-            animation: gradient-shift 3s ease infinite;
-        }
-
-        @keyframes gradient-shift {
-            0%, 100% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
+            border: 1px solid #333333;
         }
 
         .card-back-terminal-modern {
-            background: linear-gradient(135deg, #1a202c 0%, #0d1117 100%);
-            color: #e2e8f0;
+            background: #1a1a1a;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             font-family: 'JetBrains Mono', 'SF Mono', monospace;
             padding: 0;
+            border: 1px solid #333333;
         }
 
         .card-front-terminal-modern .term-header-modern {
-            background: rgba(26, 32, 44, 0.5);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: #2a2a2a;
+            border-bottom: 1px solid #444444;
             padding: 10px 15px;
-            color: #64b5f6;
+            color: #aaaaaa;
             font-size: 11px;
             font-weight: 600;
         }
@@ -448,55 +431,46 @@
         }
 
         .card-front-terminal-modern .cmd {
-            color: #94a3b8;
+            color: #999999;
         }
 
         .card-front-terminal-modern .cmd .prompt {
-            background: linear-gradient(90deg, #f97316, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
             font-weight: bold;
         }
 
         .card-front-terminal-modern .cmd .user {
-            color: #64b5f6;
+            color: #cccccc;
         }
 
         .card-front-terminal-modern .cmd .path {
-            color: #a78bfa;
+            color: #888888;
         }
 
         .card-front-terminal-modern .output {
-            color: #e2e8f0;
+            color: #ffffff;
         }
 
         .card-front-terminal-modern .ascii-accurate {
-            background: linear-gradient(135deg, #10b981, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
             font-weight: bold;
         }
 
         .card-front-terminal-modern .highlight {
-            background: linear-gradient(90deg, #f59e0b, #ef4444);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
+            font-weight: bold;
         }
 
         .card-front-terminal-modern .success {
-            color: #10b981;
+            color: #cccccc;
         }
 
         .card-front-terminal-modern .term-footer-modern {
-            background: rgba(26, 32, 44, 0.5);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: #2a2a2a;
+            border-top: 1px solid #444444;
             padding: 8px 15px;
             font-size: 10px;
-            color: #94a3b8;
+            color: #999999;
         }
 
         .card-back-terminal-modern .back-main-modern {
@@ -712,8 +686,8 @@
             </div>
         </div>
 
-        <!-- Card 18 - Modern Gradient Terminal -->
-        <h3>18. Modern Gradient Terminal</h3>
+        <!-- Card 18 - Modern Dark Terminal -->
+        <h3>18. Modern Dark Terminal</h3>
         <div class="cards-wrapper">
             <div class="card vertical card-front-terminal-modern">
                 <div class="term-header-modern">⚡ hyeman@HASIA — zsh</div>
@@ -764,16 +738,16 @@
             </div>
             
             <div class="card vertical card-back-terminal-modern">
-                <div style="height: 33px; background: rgba(26, 32, 44, 0.5); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.1);"></div>
+                <div style="height: 33px; background: #2a2a2a; border-bottom: 1px solid #444444;"></div>
                 
                 <div class="back-main-modern">
-                    <div style="color: #e2e8f0; font-size: 14px; line-height: 1.8; font-weight: 300;">
+                    <div style="color: #ffffff; font-size: 14px; line-height: 1.8; font-weight: 300;">
                         // TODO: Change the world<br/>
                         // DONE: Started already
                     </div>
                 </div>
                 
-                <div style="height: 29px; background: rgba(26, 32, 44, 0.5); backdrop-filter: blur(10px); border-top: 1px solid rgba(255, 255, 255, 0.1);"></div>
+                <div style="height: 29px; background: #2a2a2a; border-top: 1px solid #444444;"></div>
             </div>
         </div>
 
