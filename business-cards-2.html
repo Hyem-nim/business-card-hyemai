@@ -209,6 +209,144 @@
             }
         }
 
+        /* Card 19 - Print Optimized Terminal */
+        .card-front-print-optimized {
+            background: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Courier New', monospace;
+            padding: 0;
+            border: 2px solid #000000;
+        }
+
+        .card-back-print-optimized {
+            background: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Courier New', monospace;
+            padding: 0;
+            border: 2px solid #000000;
+        }
+
+        .card-front-print-optimized .term-header-print {
+            background: #000000;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .card-front-print-optimized .term-body-print {
+            flex: 1;
+            padding: 25px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .card-front-print-optimized .ascii-print {
+            color: #000000;
+            font-size: 8px;
+            line-height: 1;
+            white-space: pre;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card-front-print-optimized .info-section {
+            margin-bottom: 15px;
+        }
+
+        .card-front-print-optimized .info-label {
+            color: #666666;
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        .card-front-print-optimized .info-value {
+            color: #000000;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .card-front-print-optimized .name-large {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .card-front-print-optimized .title-large {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .card-front-print-optimized .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .card-front-print-optimized .contact-item {
+            font-size: 12px;
+            color: #000000;
+        }
+
+        .card-front-print-optimized .personality-item {
+            font-size: 11px;
+            color: #333333;
+            margin-bottom: 4px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .card-front-print-optimized .personality-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        .card-front-print-optimized .term-footer-print {
+            background: #000000;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .card-back-print-optimized .back-header-print {
+            height: 40px;
+            background: #000000;
+        }
+
+        .card-back-print-optimized .back-main-print {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .card-back-print-optimized .back-text-print {
+            color: #000000;
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: bold;
+        }
+
+        .card-back-print-optimized .back-footer-print {
+            height: 40px;
+            background: #000000;
+        }
+
         /* Card 16 - Minimal Light Terminal (Print-friendly) */
         .card-front-terminal-light {
             background: #ffffff;
@@ -748,6 +886,57 @@
                 </div>
                 
                 <div style="height: 29px; background: #2a2a2a; border-top: 1px solid #444444;"></div>
+            </div>
+        </div>
+
+        <!-- Card 19 - Print Optimized Terminal -->
+        <h3>19. Print Optimized Terminal (Larger fonts for actual printing)</h3>
+        <div class="cards-wrapper">
+            <div class="card vertical card-front-print-optimized">
+                <div class="term-header-print">HASIA CORPORATION</div>
+                
+                <div class="term-body-print">
+                    <div class="ascii-print">██╗  ██╗ █████╗ ███████╗██╗ █████╗ 
+██║  ██║██╔══██╗██╔════╝██║██╔══██╗
+███████║███████║███████╗██║███████║
+██╔══██║██╔══██║╚════██║██║██╔══██║
+██║  ██║██║  ██║███████║██║██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝</div>
+                    
+                    <div>
+                        <div class="name-large">Hyeman Lee</div>
+                        <div class="name-large">이혜만</div>
+                        <div class="title-large">Chief Executive Officer</div>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-item"><strong>Mail:</strong> hyeman@hasia.ai</div>
+                        <div class="contact-item"><strong>Phone:</strong> +82-10-9120-7914</div>
+                        <div class="contact-item"><strong>Web:</strong> https://www.hasia.ai</div>
+                        <div class="contact-item"><strong>Office:</strong> Bundang, Seongnam, Korea</div>
+                    </div>
+                    
+                    <div>
+                        <div class="personality-item">20+ years: Products, Strategy, Innovation</div>
+                        <div class="personality-item">Logical thinker & structured problem solver</div>
+                        <div class="personality-item">Advanced scuba diving certified 🤿</div>
+                    </div>
+                </div>
+                
+                <div class="term-footer-print">Feel free to reach out anytime</div>
+            </div>
+            
+            <div class="card vertical card-back-print-optimized">
+                <div class="back-header-print"></div>
+                
+                <div class="back-main-print">
+                    <div class="back-text-print">
+                        // TODO: Change the world<br/>
+                        // DONE: Started already
+                    </div>
+                </div>
+                
+                <div class="back-footer-print"></div>
             </div>
         </div>
 
