@@ -209,6 +209,121 @@
             }
         }
 
+        /* Card 16 - Highlighted Terminal Style */
+        .card-front-terminal-highlight {
+            background: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            flex-direction: column;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            padding: 0;
+        }
+
+        .card-back-terminal-highlight {
+            background: #0d1117;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            padding: 0;
+        }
+
+        .card-front-terminal-highlight .term-header {
+            background: #161b22;
+            border-bottom: 2px solid #30363d;
+            padding: 10px 15px;
+            color: #58a6ff;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .card-front-terminal-highlight .term-body {
+            flex: 1;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .card-front-terminal-highlight .cmd-block {
+            margin-bottom: 12px;
+        }
+
+        .card-front-terminal-highlight .cmd {
+            color: #8b949e;
+            margin-bottom: 3px;
+        }
+
+        .card-front-terminal-highlight .cmd .prompt {
+            color: #3fb950;
+            font-weight: bold;
+        }
+
+        .card-front-terminal-highlight .cmd .user {
+            color: #58a6ff;
+        }
+
+        .card-front-terminal-highlight .cmd .path {
+            color: #79c0ff;
+        }
+
+        .card-front-terminal-highlight .output {
+            color: #c9d1d9;
+            margin-left: 0;
+            margin-bottom: 2px;
+        }
+
+        .card-front-terminal-highlight .ascii-accurate {
+            color: #3fb950;
+            font-size: 5px;
+            line-height: 1;
+            white-space: pre;
+            font-family: monospace;
+            margin-bottom: 12px;
+        }
+
+        /* Highlighted sections */
+        .card-front-terminal-highlight .name-highlight {
+            background: #1f6feb;
+            color: #ffffff;
+            padding: 2px 4px;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .card-front-terminal-highlight .title-highlight {
+            background: #3fb950;
+            color: #000000;
+            padding: 2px 4px;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .card-front-terminal-highlight .contact-highlight {
+            background: #30363d;
+            padding: 2px 4px;
+            display: inline;
+        }
+
+        .card-front-terminal-highlight .success {
+            color: #3fb950;
+        }
+
+        .card-front-terminal-highlight .term-footer {
+            background: #161b22;
+            border-top: 2px solid #30363d;
+            padding: 8px 15px;
+            font-size: 10px;
+        }
+
+        .card-front-terminal-highlight .term-footer .cursor {
+            /* animation: blink-cursor 1s infinite; */
+            /* Cursor blinking disabled */
+        }
+
     </style>
 </head>
 <body>
@@ -282,6 +397,72 @@
             </div>
         </div>
 
+        <!-- Card 16 - Highlighted Terminal Style -->
+        <h3>16. Highlighted Terminal Style</h3>
+        <div class="cards-wrapper">
+            <div class="card vertical card-front-terminal-highlight">
+                <div class="term-header">bash - hyeman@HASIA:~</div>
+                
+                <div class="term-body">
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> cat .profile/ascii_logo.txt</div>
+                        <div class="ascii-accurate">██╗  ██╗ █████╗ ███████╗██╗ █████╗ 
+██║  ██║██╔══██╗██╔════╝██║██╔══██╗
+███████║███████║███████╗██║███████║
+██╔══██║██╔══██║╚════██║██║██╔══██║
+██║  ██║██║  ██║███████║██║██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝</div>
+                    </div>
+                    
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> whoami</div>
+                        <div class="output">hyeman</div>
+                    </div>
+                    
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> finger hyeman</div>
+                        <div class="output">Login: hyeman</div>
+                        <div class="output">Name: <span class="name-highlight">Hyeman Lee (이혜만)</span></div>
+                        <div class="output">Title: <span class="title-highlight">CEO @ HASIA Corporation</span></div>
+                        <div class="output">Mail: <span class="contact-highlight">hyeman@hasia.ai</span></div>
+                        <div class="output">Phone: <span class="contact-highlight">+82-10-9120-7914</span></div>
+                        <div class="output">Web: <span class="contact-highlight">https://www.hasia.ai</span></div>
+                        <div class="output">Office: Bundang, Seongnam, Korea</div>
+                    </div>
+                    
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> grep "personality" profile.txt</div>
+                        <div class="output">20+ years: Products, Strategy, Innovation</div>
+                        <div class="output">Logical thinker & structured problem solver</div>
+                        <div class="output">Advanced scuba diving certified 🤿</div>
+                    </div>
+                    
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> echo "Feel free to reach out anytime"</div>
+                        <div class="output success">Feel free to reach out anytime</div>
+                    </div>
+                </div>
+                
+                <div class="term-footer">
+                    <span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> <span class="cursor">_</span>
+                </div>
+            </div>
+            
+            <div class="card vertical card-back-terminal-highlight">
+                <div class="back-header-acc"></div>
+                
+                <div class="back-main-acc" style="padding: 0;">
+                    <div style="text-align: center;">
+                        <div class="back-cmd" style="font-size: 14px; line-height: 1.8; font-weight: normal;">
+                            // TODO: Change the world<br/>
+                            // DONE: Started already
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="back-footer-acc"></div>
+            </div>
+        </div>
 
     </div>
 </body>
