@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Cards Collection 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .cards-wrapper {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .card {
+            width: 600px;
+            height: 350px;
+            border-radius: 12px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 40px 0 20px 0;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Card 15 - Minimalist Gradient Style */
+        .card-front-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .card-front-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .card-front-gradient .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-front-gradient .name-minimal {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .card-front-gradient .name-eng-minimal {
+            font-size: 18px;
+            font-weight: 200;
+            opacity: 0.9;
+            margin-bottom: 12px;
+        }
+
+        .card-front-gradient .title-minimal {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.8;
+        }
+
+        .card-front-gradient .logo-minimal {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 24px;
+            font-weight: 100;
+            letter-spacing: 5px;
+            opacity: 0.3;
+        }
+
+        .card-front-gradient .contact-minimal {
+            font-size: 11px;
+            line-height: 1.8;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .card-front-gradient .joke-minimal {
+            font-size: 9px;
+            opacity: 0.6;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .card-back-gradient {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-back-gradient .quote {
+            font-size: 22px;
+            font-weight: 200;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-back-gradient .author {
+            font-size: 11px;
+            opacity: 0.7;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* Card 16 - Matrix Rain Style */
+        .card-front-matrix {
+            background: #000000;
+            color: #00ff00;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-front-matrix::before {
+            content: '10110101001011010100101101010010110101001011010100';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 10px;
+            line-height: 1.2;
+            opacity: 0.1;
+            overflow: hidden;
+            animation: matrix-rain 10s linear infinite;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        @keyframes matrix-rain {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .card-front-matrix .matrix-content {
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .card-front-matrix .name-matrix {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+        }
+
+        .card-front-matrix .name-eng-matrix {
+            font-size: 18px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .card-front-matrix .title-matrix {
+            font-size: 14px;
+            color: #00cc00;
+            margin-bottom: 20px;
+        }
+
+        .card-front-matrix .logo-matrix {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 28px;
+            opacity: 0.3;
+            color: #00ff00;
+        }
+
+        .card-front-matrix .contact-matrix {
+            font-size: 12px;
+            line-height: 1.6;
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-front-matrix .joke-matrix {
+            font-size: 10px;
+            color: #009900;
+            margin-top: 10px;
+        }
+
+        .card-back-matrix {
+            background: #000000;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-back-matrix::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 0, 0.03) 2px,
+                rgba(0, 255, 0, 0.03) 4px
+            );
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }
+
+        .card-back-matrix .matrix-quote {
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            line-height: 1.4;
+            text-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+        }
+
+        .card-back-matrix .matrix-comment {
+            font-size: 11px;
+            color: #00cc00;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+
+        /* Card 17 - Retro CRT Style */
+        .card-front-crt {
+            background: #1a1a2e;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            border: 3px solid #16213e;
+            box-shadow: inset 0 0 20px rgba(0, 162, 255, 0.2);
+        }
+
+        .card-front-crt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 162, 255, 0.05) 2px,
+                rgba(0, 162, 255, 0.05) 4px
+            );
+            pointer-events: none;
+        }
+
+        .card-front-crt::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+            pointer-events: none;
+        }
+
+        .card-front-crt .crt-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-front-crt .crt-header {
+            color: #00a2ff;
+            font-size: 10px;
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-front-crt .name-crt {
+            font-size: 30px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            margin-bottom: 5px;
+            animation: flicker 3s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            95% { opacity: 0.95; }
+            96% { opacity: 1; }
+        }
+
+        .card-front-crt .name-eng-crt {
+            font-size: 18px;
+            color: #00a2ff;
+            margin-bottom: 8px;
+        }
+
+        .card-front-crt .title-crt {
+            font-size: 14px;
+            color: #ff00ff;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .card-front-crt .logo-crt {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 24px;
+            color: #ffff00;
+            text-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
+        }
+
+        .card-front-crt .contact-crt {
+            font-size: 11px;
+            line-height: 1.8;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-front-crt .joke-crt {
+            font-size: 9px;
+            color: #ff6600;
+            margin-top: 10px;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .card-back-crt {
+            background: #0f3460;
+            color: #00ffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            border: 3px solid #16213e;
+            box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .card-back-crt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 255, 0.03) 2px,
+                rgba(0, 255, 255, 0.03) 4px
+            );
+        }
+
+        .card-back-crt .crt-quote {
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            line-height: 1.4;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
+
+        .card-back-crt .crt-comment {
+            font-size: 11px;
+            color: #ffff00;
+            margin-top: 20px;
+            text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+        }
+
+        /* Card 18 - Neon Glow Style */
+        .card-front-neon {
+            background: #0a0a0a;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.5), inset 0 0 30px rgba(255, 0, 255, 0.1);
+        }
+
+        .card-front-neon .neon-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-front-neon .name-neon {
+            font-size: 34px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+            margin-bottom: 8px;
+            animation: neon-pulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes neon-pulse {
+            from { filter: brightness(1); }
+            to { filter: brightness(1.3); }
+        }
+
+        .card-front-neon .name-eng-neon {
+            font-size: 18px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .card-front-neon .title-neon {
+            font-size: 14px;
+            color: #ff00ff;
+            text-shadow: 0 0 8px rgba(255, 0, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .card-front-neon .logo-neon {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 28px;
+            color: #ffff00;
+            text-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card-front-neon .contact-neon {
+            font-size: 12px;
+            line-height: 1.8;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .card-front-neon .contact-neon div {
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .card-front-neon .contact-neon div::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #ff00ff;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+        }
+
+        .card-front-neon .joke-neon {
+            font-size: 10px;
+            color: #00ff00;
+            text-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .card-back-neon {
+            background: #0a0a0a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), inset 0 0 30px rgba(0, 255, 255, 0.1);
+        }
+
+        .card-back-neon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border: 1px solid rgba(255, 0, 255, 0.3);
+            border-radius: 10px;
+            animation: border-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes border-pulse {
+            0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.05); }
+        }
+
+        .card-back-neon .neon-quote {
+            font-size: 22px;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            line-height: 1.4;
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-back-neon .neon-comment {
+            font-size: 11px;
+            color: #ffff00;
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 1280px) {
+            .cards-wrapper {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                width: 100%;
+                max-width: 500px;
+                height: 300px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cards-container">
+        <div class="section-title">Business Cards Collection Part 2</div>
+        
+        <!-- Card 15 - Minimalist Gradient Style -->
+        <h3 style="text-align: center; margin: 20px 0; color: #fff; font-family: 'Courier New', monospace;">15. Minimalist Gradient Style</h3>
+        <div class="cards-wrapper">
+            <div class="card card-front-gradient">
+                <div class="logo-minimal">HASIA</div>
+                <div class="content">
+                    <div>
+                        <div class="name-minimal">이혜만</div>
+                        <div class="name-eng-minimal">Hyeman Lee</div>
+                        <div class="title-minimal">Chief Executive Officer</div>
+                    </div>
+                    <div class="contact-minimal">
+                        <div>HASIA Corporation</div>
+                        <div>1101-1401, Yanghyun-Ro 220</div>
+                        <div>Bundang-Gu, Seongnam-City, South Korea</div>
+                        <div>+82-10-9120-7914</div>
+                        <div>hyeman@hasia.ai</div>
+                        <div class="joke-minimal">// Turning coffee into code since 1999</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card card-back-gradient">
+                <div>
+                    <div class="quote">
+                        Move fast<br/>
+                        Break things<br/>
+                        Fix them faster
+                    </div>
+                    <div class="author">— A developer's mantra</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 16 - Matrix Rain Style -->
+        <h3 style="text-align: center; margin: 20px 0; color: #fff; font-family: 'Courier New', monospace;">16. Matrix Rain Style</h3>
+        <div class="cards-wrapper">
+            <div class="card card-front-matrix">
+                <div class="logo-matrix">[HASIA]</div>
+                <div class="matrix-content">
+                    <div>
+                        <div class="name-matrix">이혜만</div>
+                        <div class="name-eng-matrix">Hyeman Lee</div>
+                        <div class="title-matrix">&lt;CEO /&gt;</div>
+                    </div>
+                    <div class="contact-matrix">
+                        <div>HASIA Corporation</div>
+                        <div>1101-1401, Yanghyun-Ro 220</div>
+                        <div>Bundang-Gu, Seongnam-City, South Korea</div>
+                        <div>+82-10-9120-7914</div>
+                        <div>hyeman@hasia.ai</div>
+                        <div class="joke-matrix">// Wake up, Neo... The Matrix has you</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card card-back-matrix">
+                <div>
+                    <div class="matrix-quote">
+                        There is no spoon<br/>
+                        Only code
+                    </div>
+                    <div class="matrix-comment">/* Follow the white rabbit */</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 17 - Retro CRT Style -->
+        <h3 style="text-align: center; margin: 20px 0; color: #fff; font-family: 'Courier New', monospace;">17. Retro CRT Style</h3>
+        <div class="cards-wrapper">
+            <div class="card card-front-crt">
+                <div class="logo-crt">HASIA™</div>
+                <div class="crt-content">
+                    <div>
+                        <div class="crt-header">SYSTEM READY_</div>
+                        <div class="name-crt">이혜만</div>
+                        <div class="name-eng-crt">Hyeman Lee</div>
+                        <div class="title-crt">CEO</div>
+                    </div>
+                    <div class="contact-crt">
+                        <div>&gt; HASIA Corporation</div>
+                        <div>&gt; 1101-1401, Yanghyun-Ro 220</div>
+                        <div>&gt; Bundang-Gu, Seongnam-City, South Korea</div>
+                        <div>&gt; +82-10-9120-7914</div>
+                        <div>&gt; hyeman@hasia.ai</div>
+                        <div class="joke-crt">PRESS ANY KEY TO CONTINUE_</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card card-back-crt">
+                <div>
+                    <div class="crt-quote">
+                        SYNTAX ERROR<br/>
+                        IN REALITY<br/>
+                        PLEASE REBOOT
+                    </div>
+                    <div class="crt-comment">SYSTEM HALTED</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 18 - Neon Glow Style -->
+        <h3 style="text-align: center; margin: 20px 0; color: #fff; font-family: 'Courier New', monospace;">18. Neon Glow Style</h3>
+        <div class="cards-wrapper">
+            <div class="card card-front-neon">
+                <div class="logo-neon">HASIA</div>
+                <div class="neon-content">
+                    <div>
+                        <div class="name-neon">이혜만</div>
+                        <div class="name-eng-neon">Hyeman Lee</div>
+                        <div class="title-neon">CEO</div>
+                    </div>
+                    <div class="contact-neon">
+                        <div>HASIA Corporation</div>
+                        <div>1101-1401, Yanghyun-Ro 220</div>
+                        <div>Bundang-Gu, Seongnam-City, South Korea</div>
+                        <div>+82-10-9120-7914</div>
+                        <div>hyeman@hasia.ai</div>
+                        <div class="joke-neon">// Powered by caffeine and curiosity</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card card-back-neon">
+                <div>
+                    <div class="neon-quote">
+                        Dream in code<br/>
+                        Build the future
+                    </div>
+                    <div class="neon-comment">/* Illuminating possibilities */</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
