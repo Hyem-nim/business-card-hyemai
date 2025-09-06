@@ -658,6 +658,162 @@
             font-size: 10px;
         }
 
+        /* Card 20 - Professional Enhanced Style */
+        .card-front-terminal-enhanced {
+            background: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            flex-direction: column;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            padding: 0;
+        }
+
+        .card-back-terminal-enhanced {
+            background: #0d1117;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            padding: 0;
+        }
+
+        .card-front-terminal-enhanced .term-header {
+            background: #161b22;
+            border-bottom: 2px solid #30363d;
+            padding: 10px 15px;
+            color: #58a6ff;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .card-front-terminal-enhanced .term-body {
+            flex: 1;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .card-front-terminal-enhanced .cmd-block {
+            margin-bottom: 12px;
+        }
+
+        .card-front-terminal-enhanced .cmd {
+            color: #8b949e;
+            margin-bottom: 3px;
+        }
+
+        .card-front-terminal-enhanced .cmd .prompt {
+            color: #3fb950;
+            font-weight: bold;
+        }
+
+        .card-front-terminal-enhanced .cmd .user {
+            color: #58a6ff;
+        }
+
+        .card-front-terminal-enhanced .cmd .path {
+            color: #79c0ff;
+        }
+
+        .card-front-terminal-enhanced .output {
+            color: #c9d1d9;
+            margin-left: 0;
+            margin-bottom: 2px;
+        }
+
+        /* Enhanced ASCII art - slightly bigger */
+        .card-front-terminal-enhanced .ascii-enhanced {
+            color: #3fb950;
+            font-size: 6px;
+            line-height: 1;
+            white-space: pre;
+            font-family: monospace;
+            margin-bottom: 12px;
+        }
+
+        /* Git log style */
+        .card-front-terminal-enhanced .git-log .commit-hash {
+            color: #ffa657;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+
+        /* Enhanced highlights with softer colors */
+        .card-front-terminal-enhanced .name-enhanced {
+            background: #ff6b6b;
+            color: #ffffff;
+            padding: 2px 4px;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .card-front-terminal-enhanced .title-enhanced {
+            background: #00d9ff;
+            color: #000000;
+            padding: 2px 4px;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .card-front-terminal-enhanced .contact-enhanced {
+            background: #484f58;
+            color: #ffffff;
+            padding: 2px 4px;
+            display: inline;
+        }
+
+        /* Skill highlights */
+        .card-front-terminal-enhanced .skill-highlight {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+
+        .card-front-terminal-enhanced .success {
+            color: #3fb950;
+        }
+
+        .card-front-terminal-enhanced .term-footer {
+            background: #161b22;
+            border-top: 2px solid #30363d;
+            padding: 8px 15px;
+            font-size: 10px;
+        }
+
+        /* Back card styles */
+        .back-header-enhanced {
+            height: 33px;
+            background: #161b22;
+            border-bottom: 2px solid #30363d;
+        }
+
+        .back-main-enhanced {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .back-code-enhanced {
+            color: #c9d1d9;
+            font-family: 'SF Mono', monospace;
+        }
+
+        .back-code-enhanced pre {
+            color: #c9d1d9;
+        }
+
+        .back-footer-enhanced {
+            height: 29px;
+            background: #161b22;
+            border-top: 2px solid #30363d;
+        }
+
     </style>
 </head>
 <body>
@@ -996,6 +1152,81 @@
                 </div>
                 
                 <div class="back-footer-acc"></div>
+            </div>
+        </div>
+
+        <!-- Card 20 - Professional Enhanced Style -->
+        <h3>20. Professional Enhanced Style</h3>
+        <div class="cards-wrapper">
+            <div class="card vertical card-front-terminal-enhanced">
+                <div class="term-header">bash - hyeman@HASIA:~</div>
+                
+                <div class="term-body">
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> cat .profile/ascii_logo.txt</div>
+                        <div class="ascii-enhanced">██╗  ██╗ █████╗ ███████╗██╗ █████╗ 
+██║  ██║██╔══██╗██╔════╝██║██╔══██╗
+███████║███████║███████╗██║███████║
+██╔══██║██╔══██║╚════██║██║██╔══██║
+██║  ██║██║  ██║███████║██║██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝</div>
+                    </div>
+                    
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> git log --oneline -5</div>
+                        <div class="output git-log"><span class="commit-hash">a2f3d1c</span> Founded HASIA Corporation</div>
+                        <div class="output git-log"><span class="commit-hash">9b8e4f2</span> Led product innovation</div>
+                        <div class="output git-log"><span class="commit-hash">5c7a9d1</span> Built strategic partnerships</div>
+                        <div class="output git-log"><span class="commit-hash">3f2b8e7</span> Scaled operations globally</div>
+                        <div class="output git-log"><span class="commit-hash">1a4c6d9</span> 20+ years of experience</div>
+                    </div>
+                    
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> finger hyeman</div>
+                        <div class="output">Login: hyeman</div>
+                        <div class="output">Name: <span class="name-enhanced">Hyeman Lee (이혜만)</span></div>
+                        <div class="output">Title: <span class="title-enhanced">CEO @ HASIA Corporation</span></div>
+                        <div class="output">Mail: <span class="contact-enhanced">hyeman@hasia.ai</span></div>
+                        <div class="output">Phone: <span class="contact-enhanced">+82-10-9120-7914</span></div>
+                        <div class="output">Web: <span class="contact-enhanced">https://www.hasia.ai</span></div>
+                        <div class="output">Office: Wherever WiFi Connects</div>
+                    </div>
+                    
+                    <div class="cmd-block">
+                        <div class="cmd"><span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> grep "skills" profile.txt</div>
+                        <div class="output"><span class="skill-highlight">Product Design</span>: ████████████████████ 95%</div>
+                        <div class="output"><span class="skill-highlight">Strategy</span>: ██████████████████░░ 90%</div>
+                        <div class="output"><span class="skill-highlight">Innovation</span>: ████████████████████ 100%</div>
+                        <div class="output"><span class="skill-highlight">Scuba Diving</span>: ████████████░░░░░░░░ 60%</div>
+                    </div>
+                </div>
+                
+                <div class="term-footer">
+                    <span class="user">hyeman@HASIA</span>:<span class="path">~</span><span class="prompt">$</span> <span class="cursor">_</span>
+                </div>
+            </div>
+            
+            <div class="card vertical card-back-terminal-enhanced">
+                <div class="back-header-enhanced"></div>
+                
+                <div class="back-main-enhanced" style="padding: 0;">
+                    <div style="text-align: center;">
+                        <div class="back-code-enhanced">
+                            <pre style="text-align: left; display: inline-block; font-size: 11px; line-height: 1.6;">
+try {
+  disruptIndustry();
+  buildUnicorn();
+} catch (failure) {
+  pivot();
+  tryAgain();
+} finally {
+  neverGiveUp();
+}</pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="back-footer-enhanced"></div>
             </div>
         </div>
 
